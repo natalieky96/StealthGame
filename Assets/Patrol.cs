@@ -37,11 +37,11 @@ public class Patrol : StateDaddy
         transform.rotation = Quaternion.Slerp(transform.rotation,
             Quaternion.LookRotation(direction), angleSpeed);
 
-        Debug.DrawRay(transform.position, direction, Color.green);
 
-        if (agent.remainingDistance >= agent.stoppingDistance)
+        if (direction.magnitude >= distance)
         {
             agent.SetDestination(wayPointGoal.position);
+            return;
         }
         else
         {
