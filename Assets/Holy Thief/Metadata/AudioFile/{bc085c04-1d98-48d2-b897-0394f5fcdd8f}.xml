@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bc085c04-1d98-48d2-b897-0394f5fcdd8f}">
+		<property name="assetPath">
+			<value>Ambience/swords/ambience_swords3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.6814512471655325</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fc821784-16a9-4a93-a060-4473b12d019b}</destination>
+		</relationship>
+	</object>
+</objects>

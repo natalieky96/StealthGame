@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1342673b-04a0-4f71-85ef-c49f5b48353f}">
+		<property name="assetPath">
+			<value>Ambience/main/ambience_main1.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>31.511678004535149</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fc821784-16a9-4a93-a060-4473b12d019b}</destination>
+		</relationship>
+	</object>
+</objects>

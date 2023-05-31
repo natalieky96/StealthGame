@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8330ea2c-889b-4121-b7d8-4fcaececdc22}">
+		<property name="assetPath">
+			<value>SFX/GUARD_FX/noticing/GUARD_goesback1.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.43673469387755104</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fc821784-16a9-4a93-a060-4473b12d019b}</destination>
+		</relationship>
+	</object>
+</objects>

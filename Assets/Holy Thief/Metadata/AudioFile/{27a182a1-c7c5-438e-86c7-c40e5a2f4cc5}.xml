@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{27a182a1-c7c5-438e-86c7-c40e5a2f4cc5}">
+		<property name="assetPath">
+			<value>SFX/GUARD_FX/armor/GUARD_armor-sword2.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.35208616780045354</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fc821784-16a9-4a93-a060-4473b12d019b}</destination>
+		</relationship>
+	</object>
+</objects>

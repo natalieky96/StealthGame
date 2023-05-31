@@ -7,6 +7,7 @@ public class StealthGameManager : MonoBehaviour
     public GameObject target;
     public float viewingFieldDistance = 7;
     public float viewingFieldAngle = 30;
+    public float hearingThreshold = 7f;
     Animator animator;
     private float timer = 0f;
     private float restInterval = 20f;
@@ -24,7 +25,7 @@ public class StealthGameManager : MonoBehaviour
             transform.forward * viewingFieldDistance, Color.blue);
         transform.Rotate(0, 1f, 0);
 
-        if (IsInSight())
+        if (IsInSight() || IsHeard())
         {
             animator.SetBool("visible", true);
         }
@@ -32,10 +33,13 @@ public class StealthGameManager : MonoBehaviour
         {
             animator.SetBool("visible", false);
         }
-
-        if(IsRest())
+        if (IsRest())
         {
-
+            animator.SetBool("resting", true);
+        }
+        else
+        {
+            animator.SetBool("resting", false);
         }
     }
 
@@ -85,6 +89,12 @@ public bool IsRest()
             return (hit.collider.gameObject == target);
         }        
         return false;
+    }
+
+    public bool IsHeard()
+    {
+        float hearingDistance=Vector3.Distance(transform.position, target.transform.position);
+        return (hearingDistance < hearingThreshold);
     }
 
 }

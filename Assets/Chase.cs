@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Chase : StateDaddy
 {
+    //private FMOD.Studio.EventInstance instance;
+    //public FMODUnity.StudioEventEmitter fmodEventSees;
+    //public FMODUnity.StudioEventEmitter ChaseEvent;
+
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+
+        //instance= FMODUnity.RuntimeManager.CreateInstance(ChaseEvent);
+        //fmodEventSees.Play();
+        //ChaseEvent.Play();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -29,7 +38,8 @@ public class Chase : StateDaddy
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        //instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        //ChaseEvent.Stop();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
