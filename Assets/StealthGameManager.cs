@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class StealthGameManager : MonoBehaviour
 {
@@ -12,9 +13,15 @@ public class StealthGameManager : MonoBehaviour
     private float timer = 0f;
     private float restInterval = 20f;
 
+    private EventInstance playerFootsteps;
+    
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        // not sure 
+        //playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFootsteps);
+        //playerFootsteps.start();
     }
 
     // Update is called once per frame
@@ -28,6 +35,7 @@ public class StealthGameManager : MonoBehaviour
         if (IsInSight() || IsHeard())
         {
             animator.SetBool("visible", true);
+            //AudioManager.instance.PlayOneShot(FMODEvents.instance.guardNoticing, this.transform.position);
         }
         else
         {
@@ -36,11 +44,19 @@ public class StealthGameManager : MonoBehaviour
         if (IsRest())
         {
             animator.SetBool("resting", true);
+            //playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
         }
         else
         {
             animator.SetBool("resting", false);
+            //PLAYBACK_STATE playbackState;
+            //playerFootsteps.getPlaybackState(out playbackState);
+            //if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            //{
+            //    playerFootsteps.start();
+            //}
         }
+
     }
 
 public bool IsRest()
